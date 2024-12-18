@@ -55,15 +55,16 @@ if !(isServer) then {
         call A3A_fnc_addNodesNearMarkers;
     };
 
-    if ((isClass (configfile >> "CBA_Extended_EventHandlers")) && (
-        isClass (configfile >> "CfgPatches" >> "lambs_danger"))) then {
-        // disable lambs danger fsm entrypoint
-        ["CAManBase", "InitPost", {
-            params ["_unit"];
-            (group _unit) setVariable ["lambs_danger_disableGroupAI", true];
-            _unit setVariable ["lambs_danger_disableAI", true];
-        }] call CBA_fnc_addClassEventHandler;
-    };
+    // Reenable Lambs
+    //if ((isClass (configfile >> "CBA_Extended_EventHandlers")) && (
+    //    isClass (configfile >> "CfgPatches" >> "lambs_danger"))) then {
+    //    // disable lambs danger fsm entrypoint
+    //    ["CAManBase", "InitPost", {
+    //        params ["_unit"];
+    //        (group _unit) setVariable ["lambs_danger_disableGroupAI", true];
+    //        _unit setVariable ["lambs_danger_disableAI", true];
+    //    }] call CBA_fnc_addClassEventHandler;
+    //};
 };
 
 // Server/client version check
