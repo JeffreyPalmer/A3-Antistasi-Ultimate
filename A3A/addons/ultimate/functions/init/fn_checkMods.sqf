@@ -31,7 +31,7 @@ if (["AUR_AdvancedUrbanRappelling"] call A3U_fnc_hasAddon) then {
 };
 
 if (["lambs_danger"] call A3U_fnc_hasAddon) then {
-    _addons pushBack localize "STR_A3AU_init_mods_warning_LAMBS_AI";
+    // _addons pushBack localize "STR_A3AU_init_mods_warning_LAMBS_AI";
 };
 
 if (["VCOM_AI"] call A3U_fnc_hasAddon) then {
