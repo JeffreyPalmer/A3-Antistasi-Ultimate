@@ -1,6 +1,13 @@
 #include "..\..\script_component.hpp"
 FIX_LINE_NUMBERS()
 if (!isServer and hasInterface) exitWith {false};
+
+// Disable spawning of mines
+if (isServer) exitWith {
+    Debug("fn_minefieldAAF has been disabled because we don't enjoy random mines.");
+    false
+};
+
 private ["_markerX","_base","_posbase","_posMarker","_angOrig","_ang","_attempts","_distanceX","_pos","_failure","_mineX"];
 
 _markerX = _this select 0;
