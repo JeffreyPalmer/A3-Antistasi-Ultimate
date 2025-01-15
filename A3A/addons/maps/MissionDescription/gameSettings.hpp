@@ -1,8 +1,22 @@
 respawn = "BASE";
 respawnDelay = 15;
 
-// Player corpses preserved for 15min minimum
-corpseRemovalMinTime = 900;
+// Sets the mode for automatic corpse removal.
+corpseManagerMode = 1
+
+// How often the remains collector checks monitored remains for removal. The value can be between 1 and 60.
+disposalCheckPeriod = 60
+
+// If the total number of monitored corpses is higher than corpseLimit, 
+// the corpses that have been dead for longer than corpseRemovalMinTime will be considered for removal. 
+corpseLimit = 25;
+
+// Preserve corpses for this time
+corpseRemovalMinTime = 1200;
+
+// Monitored corpses that are dead for longer than corpseRemovalMaxTime will be considered for removal regardless of the corpseLimit. 
+corpseRemovalMaxTime = 3600;
+
 
 aiKills = 0;
 disabledAI = 1;
